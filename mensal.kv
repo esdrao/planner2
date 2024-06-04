@@ -1,0 +1,29 @@
+<PlannerScreen>:
+    FloatLayout:
+        Button:
+            text: "Salvar"
+            size_hint: None, None
+            size: 100, 50
+            pos_hint: {'center_x': 0.5, 'top': 0.1}
+            on_press: app.save_text()
+        
+        TextInput:
+            id: text_input1
+            hint_text: "Input 1"
+            size_hint: None, None
+            size: 300, 50
+            pos_hint: {'center_x': 0.5, 'top': 0.8}
+        
+        TextInput:
+            id: text_input2
+            hint_text: "Input 2"
+            size_hint: None, None
+            size: 300, 50
+            pos_hint: {'center_x': 0.5, 'top': 0.65}
+        
+        TextInput:
+            id: text_input3
+            hint_text: "Input 3"
+            size_hint: None, None
+            size: 300, 50
+            pos_hint: {'center_x': 0.5, 'top': 0.5}

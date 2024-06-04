@@ -1,0 +1,68 @@
+<WhiteSquareLabel>:
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]
+
+<MainScreen>:
+    FloatLayout:
+        Image:
+            source: "C:/Users/Administrador/Downloads/fundo3.jpeg"
+            size_hint: None, None
+            size: 800, 1080
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+        WhiteSquareLabel:
+            size_hint: None, None
+            size: 340, 60
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+        Label:
+            id: month_label
+            text: "Selecione um mês"
+            size_hint: None, None
+            size: 200, 40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+            color: 0, 0, 0, 1
+            font_size: '20sp'
+
+        Button:
+            text: 'Escolher Mês'
+            size_hint: None, None
+            size: 150, 40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+            background_color: 0, 0, 0, 1
+            on_release: app.open_month_dropdown
+
+        GridLayout:
+            id: days_layout
+            cols: 7
+            spacing: 5
+            size_hint: None, None
+            size: 350, 300
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            opacity: 0
+
+        TextInput:
+            id: info_input
+            hint_text: "Digite sua informação"
+            size_hint: None, None
+            size: 280, 40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            background_color: 1, 1, 1, 1
+            foreground_color: 0, 0, 0, 1
+            opacity: 0
+
+        Button:
+            id: save_button
+            text: "Salvar"
+            size_hint: None, None
+            size: 100, 40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            background_color: 0, 0, 0, 1
+            color: 1, 1, 1, 1
+            opacity: 0
+            on_release: app.save_info

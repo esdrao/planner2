@@ -1,0 +1,61 @@
+<HalfCircleWidget>:
+    canvas.before:
+        Color:
+            rgba: self.color
+        Ellipse:
+            pos: self.center_x - self.width / 2, self.center_y - self.height / 2
+            size: self.size
+            angle_start: 90
+            angle_end: 270
+
+<ClickableSquare>:
+    allow_stretch: True
+    keep_ratio: False
+    size_hint: None, None
+    size: 100, 100
+
+FloatLayout:
+    Image:
+        source: "C:/Users/Administrador/Downloads/fundo3.jpeg"
+        size_hint: None, None
+        size: 700, 1000
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+    HalfCircleWidget:
+        color: (0.87, 0.63, 0.87)
+        size_hint: None, None
+        size: 500, 400
+        pos_hint: {"center_x": 0.5, "y": 0.63}
+
+    HalfCircleWidget:
+        color: (1, 0.8, 0.6)
+        size_hint: None, None
+        size: 300, 400
+        pos_hint: {"center_x": 0.5, "y": 0.7}
+
+    HalfCircleWidget:
+        color: (1, 1, 1)
+        size_hint: None, None
+        size: 300, 400
+        pos_hint: {"center_x": 0.5, "y": 0.76}
+
+    Image:
+        source: "C:/Users/Administrador/Downloads/texto.jpeg"
+        size_hint: None, None
+        size: 250, 150
+        pos_hint: {"center_x": 0.5, "y": 0.78}
+
+    ClickableSquare:
+        image_source: "C:/Users/Administrador/Downloads/agenda (1).jpeg"
+        size: 140, 130
+        pos_hint: {"center_x": 0.3, "y": 0.36}
+
+    ClickableSquare:
+        image_source: "C:/Users/Administrador/Downloads/cronograma2.jpeg"
+        size: 140, 130
+        pos_hint: {"center_x": 0.7, "y": 0.36}
+
+    ClickableSquare:
+        image_source: "C:/Users/Administrador/Downloads/metas2.jpeg"
+        size: 140, 130
+        pos_hint: {"center_x": 0.5, "y": 0.1}

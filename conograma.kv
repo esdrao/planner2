@@ -1,0 +1,36 @@
+<PlannerLayout>:
+    Image:
+        source: "C:/Users/Administrador/Downloads/fundo3.jpeg"
+        size_hint: None, None
+        size: 700, 800
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        
+    BoxLayout:
+        size_hint: None, None
+        size: 200, 50
+        pos_hint: {'center_x': 0.5, 'top': 0.9}
+        padding: 10
+        spacing: 10
+        orientation: 'horizontal'
+        
+        Label:
+            text: "cronograma"
+            font_size: 50
+            color: 1, 0.71, 0.76, 1
+
+    BoxLayout:
+        size_hint: None, None
+        size: 320, 270
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+<WhiteSquare>:
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [20]
